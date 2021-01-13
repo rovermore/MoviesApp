@@ -5,7 +5,7 @@ package com.example.moviesapp.injection
 
 import com.example.moviesapp.repository.RepositoryImpl
 import com.example.moviesapp.usecase.GetMovieDetailUseCase
-import com.example.moviesapp.usecase.GetPopularMovies
+import com.example.moviesapp.usecase.GetPopularMoviesUseCase
 import dagger.Module
 import dagger.Provides
 
@@ -13,8 +13,8 @@ import dagger.Provides
 class UseCaseModule {
 
     @Provides
-    fun getPopularMoviesUseCase(repositoryImpl: RepositoryImpl): GetPopularMovies =
-        GetPopularMovies(repositoryImpl)
+    fun getPopularMoviesUseCase(repositoryImpl: RepositoryImpl): GetPopularMoviesUseCase =
+        GetPopularMoviesUseCase(repositoryImpl)
 
     @Provides
     fun getMovieDetailUseCase(repositoryImpl: RepositoryImpl): GetMovieDetailUseCase =
